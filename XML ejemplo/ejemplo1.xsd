@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="persona">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="apellidos" type="xs:string"/>
+                <xs:element name="fecha_nacimiento">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="dia" type="xs:integer" default="01"/>
+                            <xs:element name="mes" type="xs:integer" default="01"/>
+                            <xs:element name="año">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1990" />
+                                        <xs:maxInclusive value="2023" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <xs:element name="diaSemana">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Lunes"></xs:enumeration>
+                                        <xs:enumeration value="Martes"></xs:enumeration>
+                                        <xs:enumeration value="Miércoles"></xs:enumeration>
+                                        <xs:enumeration value="Jueves"></xs:enumeration>
+                                        <xs:enumeration value="Viernes"></xs:enumeration>
+                                        <xs:enumeration value="Sábado"></xs:enumeration>
+                                        <xs:enumeration value="Domingo"></xs:enumeration>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element ref="direccion"></xs:element>
+                <xs:element name="dni">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{8}[A-Z]"></xs:pattern>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="edad">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:integer">
+                                <xs:attribute name="nacionalidad" type="xs:string" use="required"></xs:attribute>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+<xs:element name="direccion">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="calle" type="xs:string"></xs:element>
+            <xs:element name="cp" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+</xs:schema>
+
+
+<!-- Validacion DNI
+    Puede aparecer de 0 a 9 cifras y debe ir de la 'A' a la 'Z' mayus
+    [0-9]{8}[A-Z]
+-->

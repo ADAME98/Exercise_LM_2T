@@ -1,0 +1,42 @@
+<!DOCTYPE nodo_raiz (elementos)>
+
+
+<?xml: version='1.0'?>
+<!DOCTYPE datospersonales [ 
+!ELEMENT datospersonales (nombre,apellido,direccion,br,email?)> //"?" es que podria aparecer en el programa o no  y "*" igual que el interrogante pero pude que se varias veces. "+" es  por que tiene que aparecer al menos una vez.
+!ELEMENT nombre (#PCDATA)
+!ELEMENT apellido (#PCDATA)
+!ELEMENT direccion (#PCDATA)
+!ELEMENT br EMPTY
+!ELEMENT email (#PCDATA)
+]>
+    <datospersonales>
+        <nombre>Javier</nombre>
+        <apellido>Adame</apellido>
+        <direccion>C/Valdes leal</direccion>
+        <br/>
+        <email>slkfdkf@gfgdfg.es</email>
+    </datospersonales>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<?xml: version='1.0'?>
+<!DOCTYPE html [ 
+!ELEMENT html (head,body)
+!ELEMENT head (title*,meta*,link*)
+!ELEMENT title (#PCDATA)
+!ELEMENT meta  EMPTY
+!ELEMENT link EMPTY
+!ELEMENT body (header?,nav?,aside*,section?,footer?)
+!ELEMENT header (img,h1)
+!ELEMENT img EMPTY
+!ELEMENT h1 (#PCDATA)
+!ELEMENT footer (img,p,h3)
+]>
+
+Para decir que aparezca uno u otro usamos | en vez de una coma los separe.
+
+    ej1: ((aside) | (section))
+    Solo podria aparecer uno de los dos.
+
+    ej2: ((web,email) | (direccion,cp))

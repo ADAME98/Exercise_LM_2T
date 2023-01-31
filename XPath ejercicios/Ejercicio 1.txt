@@ -1,0 +1,25 @@
+Ejercicio 1
+
+/
+---------persona
+           |----------nombre
+           				|--------(texto)Pepe
+           |----------apellido
+           				|--------(texto)Pinillos
+           |----------dni
+           				|--------(texto)48576548D
+           |----------fechaNacimiento
+           				|--------dia
+           						  |----(texto)30
+           				|--------mes
+           						  |----(texto)3
+           				|--------anio
+           						  |----(texto)1976
+           |----------telefono
+           				|--------(texto)987531648
+           |----------telefono
+           				|--------(texto)954825465
+           |----------email
+           				|--------(texto)ppinillos@hotmail.com
+           |----------email
+           				|--------(texto)pepito@hotmail.com

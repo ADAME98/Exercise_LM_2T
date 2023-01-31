@@ -1,0 +1,25 @@
+/universidad/nombre/text()
+/universidad/pais/text()
+//carreras/carrera/nombre/text()
+//carrera/plan/text()
+//alumno/nombre/text()
+//carrera/@id
+//carreras/carrera[@id="c01"]/
+//carreras/carrera[@id="c02"]/centro/text()
+//carrera[subdirector]/nombre/text()
+//alumno[estudios/proyecto]/nombre/text()
+//alumno//carrera/@*
+//alumno[@beca="si"]/(apellido1,apellido2,nombre)
+//asignatura[@titulacion="c04"]/nombre/text()
+//asignatura[trimestre="2"]/nombre/text()
+//asignatura[creditos_teoricos=<"4"]/nombre/text()
+//alumno[last()]//carrera/@codigo
+//alumno[sexo="Mujer"]//asignatura/@codigo
+//alumno[.//asignatura/@codigo="a02"]/nombre/text()
+//alumno//carrera/@*
+//alumno[sexo="Hombre"]/(apellido1,apellido2)/text()
+//carrera[@id="c01"]/nombre/text()
+//asignatura[@id=//alumno[nombre="Luisa"]//asignatura/@codigo]/nombre/text()
+//alumno[.//asignatura/@codigo=//asignatura[nombre="Ingeniería del Software"]/@id]/apellido1/text()
+//carrera[@id=//alumno[.//asignatura[@codigo=//asignatura[nombre="Tecnología de los Alimentos"]/@id]]//carrera/@codigo]/nombre/text()
+//alumno[ not(.//carrera/@codigo=//carrera[subdirector]/@codigo)]/nombre/text()
