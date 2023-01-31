@@ -23,3 +23,5 @@
 //alumno[.//asignatura/@codigo=//asignatura[nombre="Ingeniería del Software"]/@id]/apellido1/text()
 //carrera[@id=//alumno[.//asignatura[@codigo=//asignatura[nombre="Tecnología de los Alimentos"]/@id]]//carrera/@codigo]/nombre/text()
 //alumno[ not(.//carrera/@codigo=//carrera[subdirector]/@codigo)]/nombre/text()
+//alumno[.//asignatura/@codigo=//asignatura[creditos_practicos=1.5]/@id and .//carrera/@codigo=//carrera[nombre="I.T. Informática"]/@id]/nombre/text()
+//alumno[.//carrera/@codigo=//carrera[plan<2002]/@id]/nombre/text()
